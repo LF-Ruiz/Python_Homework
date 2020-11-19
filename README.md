@@ -1,2 +1,2 @@
-# Python_Homework2
- This repository contains homework regarding python module
+# Python_Homework
+ This repository contains the Python module homework. 
