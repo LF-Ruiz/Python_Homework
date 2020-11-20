@@ -61,11 +61,40 @@ with open (file) as budgetdata:
 
 
     #printing to terminal
-    print("Total Months: ", total_months)
-    print("Total: $", net_total)
-    print("Average Changes: $", ave_changes)
-    print("Greatest Increase in Profits: ", gi_date, "($", greatest_increase,")")
-    print("Greatest Decrease in Profits: ", gd_date, "($", greatest_decrease,")")
+        print("Total Months: ", total_months)
+        print("Total: $", net_total)
+        print("Average Changes: $", ave_changes)
+        print("Greatest Increase in Profits: ", gi_date, "($", greatest_increase,")")
+        print("Greatest Decrease in Profits: ", gd_date, "($", greatest_decrease,")")
+
+#PyBank_abstract = []
+#lines = []
+#for line in lines:
+Months = ("Total Months:", total_months)
+Net =    ("Total: $", net_total)
+Average = ("Average Changes: $", ave_changes)
+Increse2 = ("Greatest Increase in Profits: ", gi_date, "($", greatest_increase,")")
+Decrease2 = ("Greatest Decrease in Profits: ", gd_date, "($", greatest_decrease,")")
+#letters = [letter for letter in fish]
+#PyBank_abstract = [lines for lines in PyBank_abstract]
+#print(PyBank_abstract)
+#print(lines)
+
 
 #output to text file
+#cleaned_csv = zip("Pybank solved")
+# Set variable for output file
+output_file = 'PyBank.txt'
 
+#  Open the output file
+with open(output_file, "w", newline="") as datafile:
+    writer = csv.writer(datafile)
+
+    # Write the header row
+#    writer.writerow('PyBank Analysis')
+    writer.writerow(Months)
+    writer.writerow(Net)
+    writer.writerow(Average)
+    writer.writerow(Increse2)
+    writer.writerow(Decrease2)
+   
