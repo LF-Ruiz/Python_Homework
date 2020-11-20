@@ -91,16 +91,20 @@ Decrease2 = ("Greatest Decrease in Profits: ", gd_date, "($", greatest_decrease,
 output_file = 'PyBank.txt'
 
 #  Open the output file
-with open(output_file, "w", newline="") as datafile:
+with open(output_file, "w",encoding="UTF-8") as datafile:
     writer = csv.writer(datafile)
 
     # Write the header row
 #    writer.writerow('PyBank Analysis')
-    writer.writerow(Header)
+#    for line in writer:
+    writer.writerow("Finalcial Analysis".format(str))
     writer.writerow(Second_line)
     writer.writerow(Months)
     writer.writerow(Net)
     writer.writerow(Average)
     writer.writerow(Increse2)
     writer.writerow(Decrease2)
+
+#    writer.writerow("\n")
+
    
