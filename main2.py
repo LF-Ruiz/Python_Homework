@@ -72,13 +72,13 @@ with open (file) as budgetdata:
 #PyBank_abstract = []
 #lines = []
 #for line in lines:
-Header = ("Finalcial Analysis")
-Second_line = ("----------------------------------")
-Months = ("Total Months:", total_months)
-Net =    ("Total: $", net_total)
-Average = ("Average Changes: $", ave_changes)
-Increse2 = ("Greatest Increase in Profits: ", gi_date, "($", greatest_increase,")")
-Decrease2 = ("Greatest Decrease in Profits: ", gd_date, "($", greatest_decrease,")")
+Header = str("Financial Analysis")
+Second_line = str("----------------------------------")
+Months = "Total Months:" + str(total_months)
+Net = "Total: $" + str(net_total)
+Average = "Average Changes: $" + str(ave_changes)
+Increse2 = "Greatest Increase in Profits: " + str(gi_date) +  "($" + str(greatest_increase) + ")"
+Decrease2 = "Greatest Decrease in Profits: " +  str(gd_date) +  "($" +  str(greatest_decrease) + ")"
 #letters = [letter for letter in fish]
 #PyBank_abstract = [lines for lines in PyBank_abstract]
 #print(PyBank_abstract)
@@ -91,20 +91,25 @@ Decrease2 = ("Greatest Decrease in Profits: ", gd_date, "($", greatest_decrease,
 output_file = 'PyBank.txt'
 
 #  Open the output file
-with open(output_file, "w",encoding="UTF-8") as datafile:
-    writer = csv.writer(datafile)
+with open(output_file, "w") as datafile:
+#    writer = csv.writer(datafile)
 
     # Write the header row
 #    writer.writerow('PyBank Analysis')
 #    for line in writer:
-    writer.writerow("Finalcial Analysis".format(str))
-    writer.writerow(Second_line)
-    writer.writerow(Months)
-    writer.writerow(Net)
-    writer.writerow(Average)
-    writer.writerow(Increse2)
-    writer.writerow(Decrease2)
-
-#    writer.writerow("\n")
+    datafile.write(Header) #print str
+    datafile.write("\n")   #enter (go to next line)
+    datafile.write(Second_line) #print str
+    datafile.write("\n") #enter (go to next line)
+    datafile.write(Months) #print str
+    datafile.write("\n") #enter (go to next line)  
+    datafile.write(Net)    #print str
+    datafile.write("\n") #enter (go to next line)
+    datafile.write(Average)#print str
+    datafile.write("\n") #enter (go to next line)
+    datafile.write(Increse2) #print str
+    datafile.write("\n") #enter (go to next line)
+    datafile.write(Decrease2) #print str
+    datafile.write("\n") #enter (go to next line)   
 
    
