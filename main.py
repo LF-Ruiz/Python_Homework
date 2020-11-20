@@ -12,5 +12,6 @@ with open (election_data) as data:
 
     for row in data_reader:
         total_votes += 1
-        
+#        pypoll_dict[voting_data[0]] = voting_data[2]
+
     print(total_votes)

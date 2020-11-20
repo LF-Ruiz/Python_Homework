@@ -61,6 +61,8 @@ with open (file) as budgetdata:
 
 
     #printing to terminal
+        print("Financial Analysis")
+        print("----------------------------------")
         print("Total Months: ", total_months)
         print("Total: $", net_total)
         print("Average Changes: $", ave_changes)
@@ -70,6 +72,8 @@ with open (file) as budgetdata:
 #PyBank_abstract = []
 #lines = []
 #for line in lines:
+Header = ("Finalcial Analysis")
+Second_line = ("----------------------------------")
 Months = ("Total Months:", total_months)
 Net =    ("Total: $", net_total)
 Average = ("Average Changes: $", ave_changes)
@@ -92,6 +96,8 @@ with open(output_file, "w", newline="") as datafile:
 
     # Write the header row
 #    writer.writerow('PyBank Analysis')
+    writer.writerow(Header)
+    writer.writerow(Second_line)
     writer.writerow(Months)
     writer.writerow(Net)
     writer.writerow(Average)
